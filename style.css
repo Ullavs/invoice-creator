@@ -1,0 +1,240 @@
+:root {
+  --background-color: #fff;
+  --background-color-header: #f5f5f5;
+  --text-header-color: #2b283a;
+  --border-color-button-top: #d5d4d8;
+  --text-color-button-top: #4a4e74;
+  --background-color-button-top: #fff;
+  --main-text-color: #4a4e74;
+  --main-subtext-color: #918e9b;
+  --horizontal-rule: #c3c6db;
+  --background-color-button: #3770ed;
+  --text-color-button: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1f2937;
+    --background-color-header: #3a69d2;
+    --text-header-color: #fff;
+    --border-color-button-top: #fff;
+    --background-color-button-top: #d1d4f4;
+    --main-text-color: #f5f5f5;
+    --main-subtext-color: #d5d4d8;
+    --background-color-button: #3a69d2;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background-color);
+  font-family: "Inter", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 32rem;
+  padding: 0 1rem 2rem;
+}
+
+header {
+  background-color: var(--background-color-header);
+  text-align: center;
+  padding: 3.6875rem 1rem 3.1875rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  color: var(--text-header-color);
+  letter-spacing: -2%;
+}
+
+header p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: var(--text-header-color);
+  margin-top: 0.5625rem;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.service {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  background-color: var(--background-color-button-top);
+  color: var(--text-color-button-top);
+  border: 1px solid var(--border-color-button-top);
+  border-radius: 0.4375rem;
+  margin-top: 2.3125rem;
+  padding: 0.62rem 0.82rem;
+  cursor: pointer;
+}
+
+.service:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (min-width: 31rem) {
+  .service {
+    font-size: 0.875rem;
+    padding: 0.90625rem 1.125rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .service {
+    border: 2px solid var(--border-color-button-top);
+  }
+}
+
+.invoice-header {
+  margin-top: 2.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task,
+.total {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: var(--main-subtext-color);
+  text-transform: uppercase;
+}
+
+.invoice-items {
+  margin: 1rem 0 2rem;
+}
+
+.invoice-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.item {
+  display: flex;
+}
+
+.item h3 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: var(--main-text-color);
+  margin-right: 0.9375rem;
+}
+
+.item span {
+  font-size: 0.5rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: var(--main-subtext-color);
+  cursor: pointer;
+}
+
+.price {
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+
+.price em {
+  font-weight: 300;
+  color: var(--main-subtext-color);
+  font-style: normal;
+}
+
+.invoice-footer {
+  padding-top: 0.6875rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--horizontal-rule);
+}
+
+.notes h2,
+.total-amount h2 {
+  font-size: 0.75rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--main-subtext-color);
+  text-transform: uppercase;
+}
+
+.notes p {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-weight: 400;
+  color: var(--main-text-color);
+  margin-top: 0.6875rem;
+}
+
+.total-amount p {
+  font-size: 2.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--main-text-color);
+  margin-top: 0.6875rem;
+  text-align: right;
+}
+
+.button-send {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color-button);
+  background-color: var(--background-color-button);
+  border-radius: 0.4375rem;
+  border: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 0.63rem 0;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 3.125rem;
+}
+
+.email-icon {
+  display: inline;
+  margin-right: 0.875rem;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice creator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Invoice creator</h1>
+      <p>Thanks for choosing GoodCorp, LLC!</p>
+    </header>
+
+    <main class="main">
+      <section class="services">
+        <button class="service" data-type="Wash Car" data-price="10">
+          Wash Car: €10
+        </button>
+        <button class="service" data-type="Mow Lawn" data-price="20">
+          Mow Lawn: €20
+        </button>
+        <button class="service" data-type="Pull Weeds" data-price="30">
+          Pull Weeds: €30
+        </button>
+      </section>
+
+      <section class="invoice">
+        <div class="invoice-header">
+          <h2 class="task">Task</h2>
+          <h2 class="total">Total</h2>
+        </div>
+
+        <div class="invoice-items"></div>
+
+        <div class="invoice-footer">
+          <div class="notes">
+            <h2>Notes</h2>
+            <p>We accept cash, credit card, or PayPal</p>
+          </div>
+          <div class="total-amount">
+            <h2>Total amount</h2>
+            <p id="display-total">€0</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <button class="button-send" id="send-invoice">
+          <img class="email-icon" src="mail-icon.svg" />Send invoice
+        </button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
